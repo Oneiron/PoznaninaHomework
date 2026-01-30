@@ -1,16 +1,18 @@
 using UnityEngine;
-
-public class Numbers : MonoBehaviour 
-
+namespace MyGame
 {
-    int _intVariable = 7;
-    float _floatVariable = 7.87f;
-    bool _boolVariable = false;
+    public class Numbers : MonoBehaviour
 
-     void Start()
     {
-        Debug.Log($"int={_intVariable}");
-        Debug.Log($"float ={_floatVariable}");
-        Debug.Log($"bool ={_boolVariable}");
+       private int _intVariable = 7;
+       private float _floatVariable = 7.87f;
+       private bool _boolVariable = false;
+
+     public void Start()
+        {
+            Debug.Log($"int={_intVariable}");
+            Debug.Log($"float={_floatVariable}");
+            Debug.Log($"bool={_boolVariable}");
+        }
     }
 }

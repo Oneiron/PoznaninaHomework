@@ -1,23 +1,26 @@
 using UnityEngine;
-
-public class Damage : MonoBehaviour
-
+namespace MyGame
 {
-    public int hp;
-    public int BaseDamage;
-    public float multiplyer;
+    public class Damage : MonoBehaviour
 
-    void Start()
     {
-        int GottenDamage = Calculatehp(multiplyer);
-        Debug.Log($"Аллозавр делает кусь и наносит {GottenDamage} урона герою, у которого было {hp} здоровья");
-        hp = BaseDamage;
-        Debug.Log($"теперь у героя {hp} здоровья");
+        public int hp;
+        public int BaseDamage;
+        public float multiplyer;
 
-    }
-    private int Calculatehp( float multiplyer )
-    {
-        return (int)(BaseDamage * multiplyer);
+        public void Start()
+        {
+            int GottenDamage = Calculatehp(multiplyer);
+            Debug.Log($"Аллозавр делает кусь и наносит {GottenDamage} урона герою, у которого было {hp} здоровья");
+            hp = BaseDamage;
+            Debug.Log($"теперь у героя {hp} здоровья");
+
+        }
+
+        private int Calculatehp(float multiplyer)
+        {
+            return (int)(BaseDamage * multiplyer);
+        }
     }
 }
 
